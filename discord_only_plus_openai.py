@@ -43,6 +43,7 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hey Friend! How can I assist you today?')
     
+    #process messages
     if message.content.startswith('$question'):
         print(f"Message: {message.content}")
         message_content = message.content.split("$question ")[1]
