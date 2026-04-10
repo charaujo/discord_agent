@@ -65,6 +65,54 @@ OPENAI_KEY=your_openai_api_key_here
 - `DISCORD_TOKEN` is required for both bot versions.
 - `OPENAI_KEY` is required only for `discord_only_plus_openai.py`.
 
+## Run In GitHub Codespaces
+
+Use this flow when working from a cloned repo in Codespaces.
+
+1. Create a Codespace from the repository:
+	- Open the repo on GitHub.
+	- Select **Code** -> **Codespaces** -> **Create codespace on main**.
+
+2. In the Codespaces terminal, create and activate a virtual environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Create your `.env` file:
+
+```bash
+cp .env.example .env
+```
+
+5. Add your credentials to `.env`:
+
+```env
+DISCORD_TOKEN=your_discord_bot_token_here
+OPENAI_KEY=your_openai_api_key_here
+```
+
+6. Start one of the bot versions:
+
+```bash
+python discord_only.py
+```
+
+or
+
+```bash
+python discord_only_plus_openai.py
+```
+
+Optional (recommended): store `DISCORD_TOKEN` and `OPENAI_KEY` as GitHub Codespaces secrets for the repo, then populate `.env` from those values inside the Codespace.
+
 ## Run
 
 ### Basic Discord bot
