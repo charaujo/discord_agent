@@ -5,6 +5,33 @@ A small Python Discord bot project with two runnable versions:
 - `discord_only.py`: Basic Discord bot that responds to the `$hello` command.
 - `discord_only_plus_openai.py`: Discord bot that responds to `$hello` and can answer `$question ...` prompts using OpenAI.
 
+## Prerequisites
+
+### Discord Setup
+
+1. Create a Discord server.
+2. Go to [https://discord.com/developers/applications](https://discord.com/developers/applications) and create a new application.
+3. Inside the application, go to **Bot**.
+   - 3.1. Enable **Message Content Intent** under Privileged Gateway Intents.
+   - 3.2. Generate a new Token, copy it, and store it in a secure place.
+4. Go to **OAuth2**.
+   - 4.1. In the **OAuth2 URL Generator**, select **Bot**. This will reveal an additional permissions section.
+   - 4.2. Enable the required bot permissions as shown in the setup video.
+5. Copy the generated URL, open it in a browser, and add the bot to your server.
+
+### OpenAI API Key
+
+> The OpenAI API requires a funded account. Adding **$5** in credits is more than enough to get started.
+
+1. Go to [platform.openai.com](https://platform.openai.com).
+2. Navigate to **API Keys**.
+3. Click **Create a new secret key**, give it a name, and click **Create secret key**.
+4. Copy the key and store it in a secure place.
+
+After completing these prerequisites, follow the **Setup** section below.
+
+---
+
 ## Requirements
 
 - Python 3.10+
